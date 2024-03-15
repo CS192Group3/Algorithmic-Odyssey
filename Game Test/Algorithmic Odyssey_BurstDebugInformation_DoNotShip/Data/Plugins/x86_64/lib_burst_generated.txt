@@ -41,6 +41,7 @@ Library: C:\Users\Johnm\wkspaces\Algorithmic Odyssey\Temp\BurstOutput\Data\Plugi
 --assembly-defines=Unity.Services.Core.Registration;
 --assembly-defines=Unity.Services.CloudSave;
 --assembly-defines=Unity.VisualScripting.State;
+--assembly-defines=Cinemachine;
 --assembly-defines=Unity.Collections.LowLevel.ILSupport;
 --assembly-defines=Unity.VisualScripting.Antlr3.Runtime;
 --assembly-defines=Unity.Burst.Unsafe;
@@ -148,6 +149,7 @@ Library: C:\Users\Johnm\wkspaces\Algorithmic Odyssey\Temp\BurstOutput\Data\Plugi
 --assembly-defines=Unity.Services.Core.Registration;
 --assembly-defines=Unity.Services.CloudSave;
 --assembly-defines=Unity.VisualScripting.State;
+--assembly-defines=Cinemachine;
 --assembly-defines=Unity.Collections.LowLevel.ILSupport;
 --assembly-defines=Unity.VisualScripting.Antlr3.Runtime;
 --assembly-defines=Unity.Burst.Unsafe;
