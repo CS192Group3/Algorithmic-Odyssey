@@ -4,4 +4,3 @@ This is a course requirement for CS 191/192 Software Engineering Courses of the 
 - Kristina Cassandra Castaneda
 - Loridge Anne Gacho
 - John Frederick Muji
-- Shane Franklin So
