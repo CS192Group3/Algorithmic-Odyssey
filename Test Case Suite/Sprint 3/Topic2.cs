@@ -7,9 +7,9 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-namespace ReviewTests
+namespace Topic2
 {
-    public class ReviewSuite : InputTestFixture
+    public class TestSuite : InputTestFixture
     {
         Mouse mouse;
         private Book book;
@@ -28,11 +28,10 @@ namespace ReviewTests
             Click(mouse.leftButton);
         }
 
-
         [UnityTest, Order(1)]
         public IEnumerator TestTopic()
         {
-            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 1");
+            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 2");
             string sceneName = SceneManager.GetActiveScene().name;
             Assert.That(sceneName, Is.EqualTo("ReviewScene"));
 
@@ -40,7 +39,7 @@ namespace ReviewTests
             yield return new WaitForSeconds(1f);
 
             sceneName = SceneManager.GetActiveScene().name;
-            Assert.That(sceneName, Is.EqualTo("Topic1"));
+            Assert.That(sceneName, Is.EqualTo("Topic2"));
 
             GameObject backButton = GameObject.Find("Canvas/Settings Container/Back/Button");
 
@@ -57,7 +56,7 @@ namespace ReviewTests
         public IEnumerator TestSkipCheck()
         {
             GameObject skipMenu = GameObject.Find("Canvas").transform.Find("skipMenu").gameObject;
-            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 1");
+            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 2");
             string sceneName = SceneManager.GetActiveScene().name;
             Assert.That(sceneName, Is.EqualTo("ReviewScene"));
             Assert.IsFalse(skipMenu.activeSelf);
@@ -72,14 +71,14 @@ namespace ReviewTests
             yield return new WaitForSeconds(1f);
 
             sceneName = SceneManager.GetActiveScene().name;
-            Assert.That(sceneName, Is.EqualTo("Topic1"));
+            Assert.That(sceneName, Is.EqualTo("Topic2"));
         }
 
 
         [UnityTest, Order(3)]
         public IEnumerator TestPages()
         {
-            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 1");
+            GameObject topicButton = GameObject.Find("Canvas/Background/Main Panel - Shadow/Wood/Button Container/Topic 2");
             ClickAction(topicButton);
             yield return new WaitForSeconds(1f);
 
@@ -88,7 +87,7 @@ namespace ReviewTests
             yield return new WaitForSeconds(1f);
 
             string sceneName = SceneManager.GetActiveScene().name;
-            Assert.That(sceneName, Is.EqualTo("Topic1"));
+            Assert.That(sceneName, Is.EqualTo("Topic2"));
 
             book = GameObject.FindObjectOfType<Book>();
             GameObject nextButton = GameObject.Find("Canvas/next");

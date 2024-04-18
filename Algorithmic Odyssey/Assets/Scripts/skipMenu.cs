@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class SkipMenu : MonoBehaviour
 {
 
     public GameObject skipMenu;
-    public static bool readTopic1 = false;
+    public static int[] readArray = new int[10];
     public string targetScene;
 
     void Start()
@@ -22,15 +23,14 @@ public class SkipMenu : MonoBehaviour
     public void GoToTopic(string sceneName)
     {
         targetScene = sceneName;
-        if (readTopic1 == true)
+        string numberPart = sceneName.Substring(5);
+        int topicNum = int.Parse(numberPart);
+        if (readArray[topicNum] == 1)
         {
             skipMenu.SetActive(true);
         } else
         {
-            if (sceneName == "Topic1")
-            {
-                readTopic1 = true;
-            }
+            readArray[topicNum] = 1;
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
         
