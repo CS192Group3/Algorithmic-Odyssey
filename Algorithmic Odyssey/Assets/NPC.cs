@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using System.Text.RegularExpressions;
 
 public class NPC : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject dialoguePanel;
+    public GameObject notenoughPanel;
     public TextMeshProUGUI dialogueText;
     public string[] dialogue;
     public TextMeshProUGUI NameContainer;
@@ -25,8 +27,14 @@ public class NPC : MonoBehaviour
 
     void Start()
     {
-        dialogueText.text = "";
-        NameContainer.text = NPCName;
+        if (dialogueText != null)
+        {
+            dialogueText.text = "";
+        }
+        if (NameContainer != null)
+        {
+            NameContainer.text = NPCName;
+        }
     }
 
     public void StartDialogue()
@@ -36,6 +44,12 @@ public class NPC : MonoBehaviour
             dialoguePanel.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(Typing());
+            if (Regex.IsMatch(dialoguePanel.name, @"^MailboxPanel \d+$"))
+            {
+                yesButton.SetActive(true);
+                noButton.SetActive(true);
+            }
+
         }
     }
 
@@ -48,19 +62,23 @@ public class NPC : MonoBehaviour
             if(dialoguePanel.activeInHierarchy)
             {
                 zeroText();
-            
             }
             else
             {
                 dialoguePanel.SetActive(true);
                 StopAllCoroutines();
                 StartCoroutine(Typing());
+                if (Regex.IsMatch(dialoguePanel.name, @"^MailboxPanel \d+$"))
+                {
+                    yesButton.SetActive(true);
+                    noButton.SetActive(true);
+                }
             }
         }
 
 
         
-        if (dialogueText.text == dialogue[index])
+        if (contButton != null && dialogueText.text == dialogue[index])
         {
             contButton.SetActive(true);
         }
@@ -78,6 +96,18 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        notenoughPanel.SetActive(false);
+        yesButton.SetActive(false);
+        noButton.SetActive(false);
+    }
+
+    public void clear()
+    {
+        dialogueText.text = "";
+        index = 0;
+        dialoguePanel.SetActive(false);
+        yesButton.SetActive(false);
+        noButton.SetActive(false);
     }
 
     IEnumerator Typing()
@@ -91,8 +121,10 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
-
+        if (contButton != null) {
         contButton.SetActive(false);
+        }
+
         if (index < dialogue.Length - 1)
         {
             index++;
@@ -100,12 +132,9 @@ public class NPC : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(Typing());
         }
-
         else
         {
             zeroText();
-            yesButton.SetActive(false);
-            noButton.SetActive(false);
         }
     }
     

@@ -93,9 +93,12 @@ public class QuizUI : MonoBehaviour
                 ColorUtility.TryParseHtmlString("#FF0000", out wrongCol);
                 btn.image.color = wrongCol;
             }
+
             
         }
     }
 
-}
 
+
+
+}

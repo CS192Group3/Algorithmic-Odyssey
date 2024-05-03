@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Algorithmic odyssey
+  m_text: Algorythmic odyssey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2503d262768126f4898789944b87f867, type: 2}
   m_sharedMaterial: {fileID: 7698188613317783365, guid: 2503d262768126f4898789944b87f867, type: 2}

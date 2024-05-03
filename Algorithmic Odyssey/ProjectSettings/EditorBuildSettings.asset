@@ -14,12 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ReviewScene.unity
     guid: 9a4693480cf39e543b8dfaef967b3b65
+  - enabled: 0
+    path: Assets/Scenes/GameScene 2.unity
+    guid: d29c90bc40be66848a1ecc647e79f575
   - enabled: 1
     path: Assets/Scenes/SettingsScene.unity
     guid: 9dd11101bea63b24e8316c30db701071
   - enabled: 1
     path: Assets/Scenes/Topic3.unity
     guid: 992e0ca61ec6a534c9ec6f86546ebd8c
+  - enabled: 1
+    path: Assets/Scenes/Topic4.unity
+    guid: 5ca8e9597ffa35b43b28900e6d089c34
   - enabled: 0
     path: Assets/Scenes/Topic1hh.unity
     guid: 07ea883fad77d4946a903fb7a3505490

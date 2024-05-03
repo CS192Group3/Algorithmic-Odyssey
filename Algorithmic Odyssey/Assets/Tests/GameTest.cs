@@ -8,14 +8,12 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Interactions;
 
-namespace DialogueTest
+namespace UpgradeTest
 {
     public class TestSuite : InputTestFixture
     {
-        GameObject player;
         Mouse mouse;
         Keyboard keyboard;
-        public Vector2 initialPosition;
 
         public override void Setup()
         {
@@ -34,49 +32,79 @@ namespace DialogueTest
         }
 
         [UnityTest, Order(1)]
-        public IEnumerator DialoguetoQuiz()
+        public IEnumerator UpgradeBuilding()
         {
-            player = GameObject.Find("Player");
-            var playerMovement = player.GetComponent<PlayerMovement>();
+            CoinsManager.iron += 100;
+            PlayerPrefs.SetInt("Iron", CoinsManager.iron);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateIron();
+            CoinsManager.stone += 100;
+            PlayerPrefs.SetInt("Stone", CoinsManager.stone);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateStone();
+            CoinsManager.treelog += 100;
+            PlayerPrefs.SetInt("treeLog", CoinsManager.treelog);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateTreeLog();
 
-            playerMovement.isTestingMovement = true;
+            yield return new WaitForSeconds(2f);
+            GameObject player = GameObject.Find("Player");
+            GameObject mailbox = GameObject.Find("MAILBOX 1");
 
-            playerMovement.testMovementDirection = new Vector2(-1, -1);
-            initialPosition = player.transform.position;
-            yield return new WaitForSeconds(0.77f);
+            player.transform.position = mailbox.transform.position;
 
-            playerMovement.testMovementDirection = new Vector2(-1, 0);
-            initialPosition = player.transform.position;
-            yield return new WaitForSeconds(7.3f);
+            yield return new WaitUntil(() => player.transform.position == mailbox.transform.position);
+            yield return new WaitForSeconds(2f);
 
-            playerMovement.testMovementDirection = new Vector2(0, 1);
-            initialPosition = player.transform.position;
-            yield return new WaitForSeconds(0.51f);
-
-            playerMovement.isTestingMovement = false;
-            playerMovement.testMovementDirection = Vector2.zero;
+            Assert.AreEqual(player.transform.position, mailbox.transform.position);
 
             Press(keyboard[Key.E]);
             yield return null;
             Release(keyboard[Key.E]);
             yield return null;
 
-            yield return new WaitForSeconds(2.3f);
+            yield return new WaitUntil(() => GameObject.Find("Canvas/MailboxPanel 1/DialogueChoices/Yes") != null);
+            yield return new WaitForSeconds(8f);
 
-            GameObject continueButton = GameObject.Find("Canvas/DialoguePanel 1/ContinueButton");
+            GameObject sendButton = GameObject.Find("Canvas/MailboxPanel 1/DialogueChoices/Yes");
 
-            ClickAction(continueButton);
-            yield return new WaitForSeconds(8.7f);
+            ClickAction(sendButton);
+            yield return new WaitUntil(() => GameObject.Find("Grid/Building 1/Level 2") != null);
 
-            ClickAction(continueButton);
-            yield return new WaitForSeconds(2.3f);
+            Assert.IsNotNull(GameObject.Find("Grid/Building 1/Level 2"));
 
-            GameObject YesButton = GameObject.Find("Canvas/DialoguePanel 1/DialogueChoices/Yes");
-            ClickAction(YesButton);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
 
-            string sceneName = SceneManager.GetActiveScene().name;
-            Assert.That(sceneName, Is.EqualTo("Quiz1"));
+            CoinsManager.iron = 0;
+            PlayerPrefs.SetInt("Iron", CoinsManager.iron);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateIron();
+            CoinsManager.stone = 0;
+            PlayerPrefs.SetInt("Stone", CoinsManager.stone);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateStone();
+            CoinsManager.treelog = 0;
+            PlayerPrefs.SetInt("treeLog", CoinsManager.treelog);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateTreeLog();
+
+            Press(keyboard[Key.E]);
+            yield return null;
+            Release(keyboard[Key.E]);
+            yield return null;
+
+            yield return new WaitUntil(() => GameObject.Find("Canvas/MailboxPanel 1/DialogueChoices/Yes") != null);
+            yield return new WaitForSeconds(8f);
+            sendButton = GameObject.Find("Canvas/MailboxPanel 1/DialogueChoices/Yes");
+
+            ClickAction(sendButton);
+            yield return new WaitForSeconds(4f);
+
+            yield return new WaitUntil(() => GameObject.Find("Canvas/NotEnough Panel") != null);
+
+            Assert.IsNotNull(GameObject.Find("Canvas/NotEnough Panel"));
+
+            yield return new WaitForSeconds(2f);
         }
 
     }
