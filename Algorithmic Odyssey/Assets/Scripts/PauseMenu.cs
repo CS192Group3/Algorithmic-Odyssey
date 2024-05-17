@@ -10,12 +10,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseButt;
     public bool isPaused;
     public bool inSettings;
+    private int currentSceneIndex;
+    SavePlayerPos playerPosData;
     
     void Start()
     {
         pauseMenu.SetActive(false);
         settingsPanel.SetActive(false);
         pauseButt.SetActive(true);
+        playerPosData = FindObjectOfType<SavePlayerPos>();
     }
 
     
@@ -47,6 +50,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        settingsPanel.SetActive(false);
         pauseButt.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
@@ -54,6 +58,7 @@ public class PauseMenu : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+        playerPosData.PlayerPosSave();
         SceneManager.LoadScene("MainMenu");
         isPaused = false;
     }

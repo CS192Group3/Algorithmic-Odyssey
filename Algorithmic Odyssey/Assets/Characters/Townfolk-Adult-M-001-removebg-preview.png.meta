@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: cb3318b0175919c4ea3abe49d4798122
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66fa6c87e4b8be41b018b8470de0e24
+      internalID: -1023991546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c15ffa1f488468429eb8bb051984d17
+      internalID: -1888319563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b818e6f830e12fc48962cb18d461230d
+      internalID: 1928004601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dd3308e2b2189449d00c6a0b079919
+      internalID: 1206774454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d5df8c3516df47a638a0c616a4ba1
+      internalID: -1096144809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 96
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d16c1df2aca46c4abfb6c0e3ad226e1
+      internalID: 1313739229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f6e6b0db043954299fb50e8a8b281c
+      internalID: 507060788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef53e5724572f844e8c73c507f9b4f04
+      internalID: 518467651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cf6af4116c8864f978bf259405d335
+      internalID: -846574289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9688ae211150c40a77288bd79cf515
+      internalID: 2030922171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c016dfadb413d49b5b21a17e656208
+      internalID: 50767954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 64
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c319929fdfff242bf44cfaa785f6f8
+      internalID: -1953340981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd958f1f8a87165429a1a81b9e82349a
+      internalID: 636489223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f43c42f3bc37fc458a0e6db955b88f3
+      internalID: 1915307131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd2f5091fd128645ac62fe7fc002e62
+      internalID: -1527271787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2445e3524d74c4c8f0893d0e4e2b89
+      internalID: 1643501131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78b2874e867606459a1ba55ad8ada76
+      internalID: 1024815622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 32
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43460b0881ee70240be6aea408b26e6b
+      internalID: 266307468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01df66725d9c58b41b5c2b462841d5a5
+      internalID: 534801202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5332ca0e47075cc4d8ab95fde174875d
+      internalID: 440355842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe5671d949080146933c52fe399d3f8
+      internalID: -2086746987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Townfolk-Adult-M-001-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25.5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856684206910aa849863f30209dd9e2d
+      internalID: -585652989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Townfolk-Adult-M-001-removebg-preview_0: -1023991546
+      Townfolk-Adult-M-001-removebg-preview_1: -1888319563
+      Townfolk-Adult-M-001-removebg-preview_10: 50767954
+      Townfolk-Adult-M-001-removebg-preview_11: -1953340981
+      Townfolk-Adult-M-001-removebg-preview_12: 636489223
+      Townfolk-Adult-M-001-removebg-preview_13: 1915307131
+      Townfolk-Adult-M-001-removebg-preview_14: -1527271787
+      Townfolk-Adult-M-001-removebg-preview_15: 1643501131
+      Townfolk-Adult-M-001-removebg-preview_16: 1024815622
+      Townfolk-Adult-M-001-removebg-preview_17: 266307468
+      Townfolk-Adult-M-001-removebg-preview_18: 534801202
+      Townfolk-Adult-M-001-removebg-preview_19: 440355842
+      Townfolk-Adult-M-001-removebg-preview_2: 1928004601
+      Townfolk-Adult-M-001-removebg-preview_20: -2086746987
+      Townfolk-Adult-M-001-removebg-preview_21: -585652989
+      Townfolk-Adult-M-001-removebg-preview_3: 1206774454
+      Townfolk-Adult-M-001-removebg-preview_4: -1096144809
+      Townfolk-Adult-M-001-removebg-preview_5: 1313739229
+      Townfolk-Adult-M-001-removebg-preview_6: 507060788
+      Townfolk-Adult-M-001-removebg-preview_7: 518467651
+      Townfolk-Adult-M-001-removebg-preview_8: -846574289
+      Townfolk-Adult-M-001-removebg-preview_9: 2030922171
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

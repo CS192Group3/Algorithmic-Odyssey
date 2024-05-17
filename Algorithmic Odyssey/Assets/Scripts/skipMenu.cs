@@ -15,8 +15,8 @@ public class SkipMenu : MonoBehaviour
     }
     public void GoToScene(string sceneName)
     {
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SceneManagerScript.SetReturnScene("ReviewScene");
+        SceneManagerScript.LoadScene(targetScene);
 
     }
 
@@ -31,14 +31,17 @@ public class SkipMenu : MonoBehaviour
         } else
         {
             readArray[topicNum] = 1;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+            SceneManagerScript.SetReturnScene("ReviewScene");
+            SceneManagerScript.LoadScene(sceneName);
+
         }
-        
+
     }
 
     public void Continue()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(targetScene);
+        SceneManagerScript.SetReturnScene("ReviewScene");
+        SceneManagerScript.LoadScene(targetScene);
         skipMenu.SetActive(false);
     }
     public void backSkip()

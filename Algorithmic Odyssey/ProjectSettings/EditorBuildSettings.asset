@@ -26,6 +26,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Topic4.unity
     guid: 5ca8e9597ffa35b43b28900e6d089c34
+  - enabled: 1
+    path: Assets/Scenes/Quiz/Quiz5.unity
+    guid: 449456fb29c6ee84baceb39a75c80d47
+  - enabled: 1
+    path: Assets/Scenes/Topic6.unity
+    guid: d7200e9a2431bc645ac064e53a4014de
+  - enabled: 1
+    path: Assets/Scenes/Quiz/Quiz6.unity
+    guid: 234ff5df74195f24f8ef8682430bca70
+  - enabled: 1
+    path: Assets/Scenes/Topic5.unity
+    guid: 444f3ced5e667cb43b5f6a84c5f3c8f5
+  - enabled: 1
+    path: Assets/Scenes/Quiz/Quiz3.unity
+    guid: 253611e37f40de94ba1211884a69810b
+  - enabled: 1
+    path: Assets/Scenes/Quiz/Quiz4.unity
+    guid: 513b8cbaceb8de149bdfbf4ee0cdbca4
+  - enabled: 1
+    path: Assets/Scenes/Quiz/Quiz2.unity
+    guid: d726031ce1216734a8b10dfad4e087ad
   - enabled: 0
     path: Assets/Scenes/Topic1hh.unity
     guid: 07ea883fad77d4946a903fb7a3505490

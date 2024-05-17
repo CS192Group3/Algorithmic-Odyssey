@@ -8,10 +8,9 @@ using System.Text.RegularExpressions;
 
 public class NPC : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public GameObject dialoguePanel;
     public GameObject notenoughPanel;
+    public GameObject maxPanel;
     public TextMeshProUGUI dialogueText;
     public string[] dialogue;
     public TextMeshProUGUI NameContainer;
@@ -23,7 +22,6 @@ public class NPC : MonoBehaviour
     public GameObject noButton;
     public float wordSpeed;
     public bool playerIsClose;
-
 
     void Start()
     {
@@ -41,43 +39,38 @@ public class NPC : MonoBehaviour
     {
         if (playerIsClose)
         {
-            dialoguePanel.SetActive(true);
+            if (dialoguePanel != null)
+            {
+                dialoguePanel.SetActive(true);
+            }
             StopAllCoroutines();
             StartCoroutine(Typing());
-            if (Regex.IsMatch(dialoguePanel.name, @"^MailboxPanel \d+$"))
-            {
-                yesButton.SetActive(true);
-                noButton.SetActive(true);
-            }
-
+            SetMailboxButtons();
         }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if (Keyboard.current.eKey.wasPressedThisFrame && playerIsClose)
         {
-            if(dialoguePanel.activeInHierarchy)
+            dialogueText.text = "";
+
+            if (dialoguePanel != null && dialoguePanel.activeInHierarchy)
             {
                 zeroText();
             }
             else
             {
-                dialoguePanel.SetActive(true);
+                if (dialoguePanel != null)
+                {
+                    dialoguePanel.SetActive(true);
+                }
                 StopAllCoroutines();
                 StartCoroutine(Typing());
-                if (Regex.IsMatch(dialoguePanel.name, @"^MailboxPanel \d+$"))
-                {
-                    yesButton.SetActive(true);
-                    noButton.SetActive(true);
-                }
+                SetMailboxButtons();
             }
         }
 
-
-        
         if (contButton != null && dialogueText.text == dialogue[index])
         {
             contButton.SetActive(true);
@@ -88,26 +81,26 @@ public class NPC : MonoBehaviour
             yesButton.SetActive(true);
             noButton.SetActive(true);
         }
-        
     }
 
     public void zeroText()
     {
         dialogueText.text = "";
         index = 0;
-        dialoguePanel.SetActive(false);
-        notenoughPanel.SetActive(false);
-        yesButton.SetActive(false);
-        noButton.SetActive(false);
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        if (notenoughPanel != null) notenoughPanel.SetActive(false);
+        if (maxPanel != null) maxPanel.SetActive(false);
+        if (yesButton != null) yesButton.SetActive(false);
+        if (noButton != null) noButton.SetActive(false);
     }
 
     public void clear()
     {
         dialogueText.text = "";
         index = 0;
-        dialoguePanel.SetActive(false);
-        yesButton.SetActive(false);
-        noButton.SetActive(false);
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        if (yesButton != null) yesButton.SetActive(false);
+        if (noButton != null) noButton.SetActive(false);
     }
 
     IEnumerator Typing()
@@ -121,8 +114,9 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
-        if (contButton != null) {
-        contButton.SetActive(false);
+        if (contButton != null)
+        {
+            contButton.SetActive(false);
         }
 
         if (index < dialogue.Length - 1)
@@ -137,14 +131,12 @@ public class NPC : MonoBehaviour
             zeroText();
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
-            // dialoguePanel.SetActive(true);
-            // StartCoroutine(Typing());
         }
     }
 
@@ -152,8 +144,26 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerIsClose = false;
-            zeroText();
+            if (gameObject != null)
+            {
+                playerIsClose = false;
+                zeroText();
+            }
+        }
+    }
+
+
+    private void SetMailboxButtons()
+    {
+        if (Regex.IsMatch(dialoguePanel.name, @"^MailboxPanel \d+$"))
+        {
+            if (yesButton != null) yesButton.SetActive(true);
+            if (noButton != null) noButton.SetActive(true);
+        }
+        else
+        {
+            if (yesButton != null) yesButton.SetActive(false);
+            if (noButton != null) noButton.SetActive(false);
         }
     }
 }

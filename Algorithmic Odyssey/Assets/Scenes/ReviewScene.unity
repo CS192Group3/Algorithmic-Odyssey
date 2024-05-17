@@ -1390,16 +1390,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
+      - m_Target: {fileID: 144493936}
+        m_TargetAssemblyTypeName: SkipMenu, GameAssembly
+        m_MethodName: GoToTopic
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Topic6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &370690107
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Topic 5
+  m_text: Huffman Coding
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2503d262768126f4898789944b87f867, type: 2}
   m_sharedMaterial: {fileID: 7698188613317783365, guid: 2503d262768126f4898789944b87f867, type: 2}
@@ -3641,9 +3641,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 144493935}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: GoToScene
-        m_Mode: 5
+        m_TargetAssemblyTypeName: MainMenu, GameAssembly
+        m_MethodName: BackInitial
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4667,7 +4667,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747736975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 144493936}
+        m_TargetAssemblyTypeName: SkipMenu, GameAssembly
+        m_MethodName: GoToTopic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Topic5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1747736975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4897,9 +4909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Topic 6
-
-'
+  m_text: Kruskal's Algorithm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2503d262768126f4898789944b87f867, type: 2}
   m_sharedMaterial: {fileID: 7698188613317783365, guid: 2503d262768126f4898789944b87f867, type: 2}

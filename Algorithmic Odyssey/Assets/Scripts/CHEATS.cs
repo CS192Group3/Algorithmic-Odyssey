@@ -26,9 +26,13 @@ public class CHEATS : MonoBehaviour
             PlayerPrefs.Save();
             CoinsManager.UpdateStone();
             CoinsManager.treelog += 100;
-            PlayerPrefs.SetInt("treeLog", CoinsManager.treelog);
+            PlayerPrefs.SetInt("TreeLog", CoinsManager.treelog);
             PlayerPrefs.Save();
             CoinsManager.UpdateTreeLog();
+            CoinsManager.coins += 100;
+            PlayerPrefs.SetInt("Coins", CoinsManager.coins);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateCoins();
         }
         if (Keyboard.current.qKey.wasPressedThisFrame && playerIsClose)
         {
@@ -44,6 +48,10 @@ public class CHEATS : MonoBehaviour
             PlayerPrefs.SetInt("treeLog", CoinsManager.treelog);
             PlayerPrefs.Save();
             CoinsManager.UpdateTreeLog();
+            CoinsManager.coins = 0;
+            PlayerPrefs.SetInt("Coins", CoinsManager.coins);
+            PlayerPrefs.Save();
+            CoinsManager.UpdateCoins();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

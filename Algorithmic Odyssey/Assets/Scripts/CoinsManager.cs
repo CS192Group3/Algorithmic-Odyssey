@@ -6,8 +6,7 @@ public class CoinsManager : MonoBehaviour
 {
     public const string Coins = "Coins";
     public static int coins = 0;
-
-    public const string treeLog = "TreeLog";
+    public const string TreeLog = "TreeLog";
     public static int treelog = 0;
     public const string Iron = "Iron";
     public static int iron = 0;
@@ -51,5 +50,25 @@ public class CoinsManager : MonoBehaviour
         PlayerPrefs.SetInt("Stone", stone);
         stone = PlayerPrefs.GetInt("Stone");
         PlayerPrefs.Save();
+    }
+
+    public static void RestartMats()
+    {
+        CoinsManager.iron = 0;
+        PlayerPrefs.SetInt("Iron", CoinsManager.iron);
+        PlayerPrefs.Save();
+        CoinsManager.UpdateIron();
+        CoinsManager.stone = 0;
+        PlayerPrefs.SetInt("Stone", CoinsManager.stone);
+        PlayerPrefs.Save();
+        CoinsManager.UpdateStone();
+        CoinsManager.treelog = 0;
+        PlayerPrefs.SetInt("TreeLog", CoinsManager.treelog);
+        PlayerPrefs.Save();
+        CoinsManager.UpdateTreeLog();
+        CoinsManager.coins = 0;
+        PlayerPrefs.SetInt("Coins", CoinsManager.coins);
+        PlayerPrefs.Save();
+        CoinsManager.UpdateCoins();
     }
 }

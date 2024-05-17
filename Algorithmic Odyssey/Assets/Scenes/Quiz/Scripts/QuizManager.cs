@@ -18,10 +18,13 @@ public class QuizManager : MonoBehaviour
     // private Item rewardItem;
     // [SerializeField] private List<Item> rewardItems;
 
+    //SavePlayerPos playerPosData;
+
     void Start()
     {
         scoreCOunt = 0;
         SelectQuestion();
+        //playerPosData = FindObjectOfType<SavePlayerPos>();
 
         
     }
@@ -36,6 +39,22 @@ public class QuizManager : MonoBehaviour
             {
                 string[] resources = { "iron", "stone", "treelog" };
                 int[] quantities = { 14, 10, 8 };
+
+                if (scoreCOunt > 15)
+                {
+                    CoinsManager.coins += 14;
+                    PlayerPrefs.SetInt("Coins", CoinsManager.coins);
+                    PlayerPrefs.Save();
+                    CoinsManager.UpdateCoins();
+                } else
+                {
+                    CoinsManager.coins += 8;
+                    PlayerPrefs.SetInt("Coins", CoinsManager.coins);
+                    PlayerPrefs.Save();
+                    CoinsManager.UpdateCoins();
+                }
+
+                
 
                 // Shuffle the resources and quantities arrays
                 System.Random rng = new System.Random();
@@ -60,7 +79,7 @@ public class QuizManager : MonoBehaviour
                             break;
                         case "treelog":
                             CoinsManager.treelog += quantities[i];
-                            PlayerPrefs.SetInt("treeLog", CoinsManager.treelog);
+                            PlayerPrefs.SetInt("TreeLog", CoinsManager.treelog);
                             PlayerPrefs.Save();
                             CoinsManager.UpdateTreeLog();
                             break;
@@ -68,7 +87,9 @@ public class QuizManager : MonoBehaviour
                 }
                 
             }
-            SceneManager.LoadScene("ReviewScene");
+            //playerPosData.PlayerPosSave();
+            SceneManagerScript.SetInitialScene("GameScene");
+            SceneManagerScript.LoadScene("ReviewScene");
             return;
         }
         int val = Random.Range(0, questions.Count);
