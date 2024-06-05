@@ -7,9 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject settingsPanel;
+    public GameObject tutPanel;
     public GameObject pauseButt;
     public bool isPaused;
     public bool inSettings;
+    public static bool tutDone = true;
     private int currentSceneIndex;
     SavePlayerPos playerPosData;
     
@@ -17,7 +19,8 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         settingsPanel.SetActive(false);
-        pauseButt.SetActive(true);
+        tutPanel.SetActive(tutDone);
+        pauseButt.SetActive(!tutDone);
         playerPosData = FindObjectOfType<SavePlayerPos>();
     }
 
@@ -52,6 +55,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         settingsPanel.SetActive(false);
         pauseButt.SetActive(true);
+        tutPanel.SetActive(false);
+        tutDone = false;
         Time.timeScale = 1f;
         isPaused = false;
     }
