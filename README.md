@@ -4,3 +4,8 @@ This is a course requirement for CS 191/192 Software Engineering Courses of the 
 - Kristina Cassandra Castaneda
 - Loridge Anne Gacho
 - John Frederick Muji
+
+## To try the game:
+- Clone the repo
+- Got to the "Algorithmic Odyssey Build" folder
+- Open Algorithmic Odyssey.exe
